@@ -295,6 +295,9 @@ class _VendorsScreenState extends State<VendorsScreen> {
       // Default rating value
       double defaultRating = 3.5;
 
+      // Add numberOfRatings field with default value 1
+      int numberOfRatings = 1;
+
       await _firestore.collection("vendors").doc(vendorId).set({
         'vendorId': vendorId,
         'image': imageUrl,
@@ -304,6 +307,7 @@ class _VendorsScreenState extends State<VendorsScreen> {
         'categoryId': _selectedCategoryId,
         'productId': productId,
         'rating': defaultRating, // Include default rating
+        'numberOfRatings': numberOfRatings, // Include numberOfRatings
         'description': _descriptionController.text, // Include vendor description
       }).then((value) {
         EasyLoading.dismiss();
