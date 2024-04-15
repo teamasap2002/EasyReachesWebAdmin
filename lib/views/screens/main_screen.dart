@@ -8,7 +8,6 @@ import 'package:shopworm_web_admin/views/screens/side_bar_screen/orders_screen.d
 import 'package:shopworm_web_admin/views/screens/side_bar_screen/product_screen.dart';
 import 'package:shopworm_web_admin/views/screens/side_bar_screen/upload_banner_screen.dart';
 import 'package:shopworm_web_admin/views/screens/side_bar_screen/vendors_screen.dart';
-import 'package:shopworm_web_admin/views/screens/side_bar_screen/withdrawl_screen.dart';
 
 
 class MainScreen extends StatefulWidget {
@@ -31,11 +30,6 @@ class _MainScreenState extends State<MainScreen> {
       case VendorsScreen.routeName:
         setState(() {
           _selectedItem = VendorsScreen();
-        });
-        break;
-      case WithdrawlScreen.routeName:
-        setState(() {
-          _selectedItem = WithdrawlScreen();
         });
         break;
       case OrderScreen.routeName:
@@ -83,11 +77,6 @@ class _MainScreenState extends State<MainScreen> {
               route: VendorsScreen.routeName,
             ),
             AdminMenuItem(
-              title: 'Withdrawl',
-              icon: CupertinoIcons.money_dollar,
-              route: WithdrawlScreen.routeName,
-            ),
-            AdminMenuItem(
               title: 'Orders',
               icon: CupertinoIcons.cart,
               route: OrderScreen.routeName,
@@ -117,7 +106,7 @@ class _MainScreenState extends State<MainScreen> {
             color: const Color(0xff444444),
             child: const Center(
               child: Text(
-                'Shopworm Admin Panel',
+                'Easy Reaches Admin Panel',
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -130,7 +119,7 @@ class _MainScreenState extends State<MainScreen> {
             color: const Color(0xff444444),
             child: const Center(
               child: Text(
-                'footer',
+                'Developed and Maintained by- \nTEAM ASAP',
                 style: TextStyle(
                   color: Colors.white,
                 ),
